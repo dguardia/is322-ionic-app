@@ -1,0 +1,21 @@
+<ion-view view-title="Clients">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item item-icon-left" ng-repeat="client in clients" href="#/app/clients/{{client.id}}">
+                    <i class="icon ion-email"></i>
+                    {{client.title}}
+
+            </ion-item>
+            <a class="button button-block"><i class="icon ion-home"></i> Default</a>
+            <a class="button button-block button-light">.button-light</a>
+            <a class="button button-block button-stable">.button-stable</a>
+            <a class="button button-block button-positive">.button-positive</a>
+            <a class="button button-block button-calm">.button-calm</a>
+            <a class="button button-block button-balanced">.button-balanced</a>
+            <a class="button button-block button-assertive">.button-assertive</a>
+            <a class="button button-block button-energized">.button-energized</a>
+            <a class="button button-block button-royal">.button-royal</a>
+            <a class="button button-block button-dark">.button-dark</a>
+        </ion-list>
+    </ion-content>
+</ion-view>
