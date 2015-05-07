@@ -1,5 +1,70 @@
 <ion-view view-title="Invoice">
     <ion-content>
-        <h1>Invoice</h1>
+        <ion-list>
+            <ion-item>
+                <h1 class="text-center">Invoice</h1>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="vcard">
+                            <p class="fn"><a class="url" href="#">Lili Sharkey</a><p>
+                            <p class="adr">
+                                <span class="street-address">HTML5 Hospital</span><br>
+                                <span class="region">Doctorville</span><br>
+                                <span class="postal-code">Postal Code</span><br>
+                                <span class="country-name">Great Britain</span>
+                            </p>
+                            <p class="tel">555 555 5555</p>
+                        </div>
+                    </div>
+                    <div class="col">Invoice Nº {{20001}} <br> PO# {{20151}} <br/> Pay to: Frelance</div>
+                </div>
+                <hr/>
+
+                <div class="row">
+                    <div class="col col-invoice top-col"><strong>items</strong></div>
+                    <div class="col col-50 col-invoice top-col"><strong>Description</strong></div>
+                    <div class="col col-invoice top-col"><strong>Subtotal</strong></div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-invoice">1</div>
+                    <div class="col col-50 col-invoice">Description First</div>
+                    <div class="col col-invoice">$215.00</div>
+                </div>
+                <div class="row">
+                    <div class="col col-invoice">2</div>
+                    <div class="col col-50 col-invoice"> Description Second</div>
+                    <div class="col col-invoice">$15.00</div>
+                </div>
+                <div class="row">
+                    <div class="col col-invoice">3</div>
+                    <div class="col col-50 col-invoice">Description Third</div>
+                    <div class="col col-invoice">$5.00</div>
+                </div>
+                <div class="row">
+                    <div class="col col-invoice">4</div>
+                    <div class="col col-50 col-invoice">Description Fourth</div>
+                    <div class="col col-invoice">$200.00</div>
+                </div>
+                <div class="row">
+                    <div class="col col-invoice">5</div>
+                    <div class="col col-50 col-invoice">Description Fifth</div>
+                    <div class="col col-invoice">$215.00</div>
+                </div>
+                <div class="row">
+                    <div class="col col-75 col-invoice text-right"><strong>Total</strong></div>
+                    <div class="col col-invoice"><strong>$650.00</strong></div>
+                </div>
+                <div class="row responsive-sm item item-list">
+                    <div class="col">Date:</div>
+                    <div class="col col-50">25/04/2015</div>
+                </div>
+                <div class="row responsive-sm item item-list">
+                    <div class="col">Type Payment:</div>
+                    <div class="col col-50">Check</div>
+                </div>
+                <a class="item item-icon-left" href="mailto:{{clients.email}}"><i class="icon ion-email"></i>Email Invoice<p>{{client.email}}</p></a>
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

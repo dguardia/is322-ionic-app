@@ -15,9 +15,26 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$think: 1px;
 $stable: #4e8ef7;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+.col-invoice{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.top-col {
+  border-top: 1px solid black;
+}
+.large {
+  font-size: 25px;
+  speak: none;
+  font-style: normal;
+  color: red;
+
+}

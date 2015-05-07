@@ -1,21 +1,37 @@
 <ion-view view-title="Clients">
+    <ion-header-bar class="bar bar-subheader">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-minus-outline"
+                    ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+        </div>
+        <h1 class="title"><span class="badge badge-assertive">{{items.length}}</span> Items loaded</h1>
+        <div class="buttons">
+            <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+                Reorder
+            </button>
+        </div>
+    </ion-header-bar>
     <ion-content>
-        <ion-list>
-            <ion-item class="item item-icon-left" ng-repeat="client in clients" href="#/app/clients/{{client.id}}">
-                    <i class="icon ion-email"></i>
-                    {{client.title}}
+        <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
 
+            <ion-item ng-repeat="client in clients"
+                      client="client"
+                      href="#/app/clients/{{client.id}}" class="item-remove-animate item-icon-left">
+                <i class="icon ion-person"> </i><p>{{client.name}}</p>
+                <ion-delete-button class="ion-minus-circled"
+                                   ng-click="onClientDelete(client)">
+                </ion-delete-button>
+                <ion-option-button class="button-assertive"
+                                   ng-click="edit(client)">
+                    Edit
+                </ion-option-button>
+                <ion-option-button class="button-calm"
+                                   ng-click="share(client)">
+                    Share
+                </ion-option-button>
+                <ion-reorder-button class="ion-navicon" on-reorder="moveClient(client, $fromIndex, $toIndex)"></ion-reorder-button>
             </ion-item>
-            <a class="button button-block"><i class="icon ion-home"></i> Default</a>
-            <a class="button button-block button-light">.button-light</a>
-            <a class="button button-block button-stable">.button-stable</a>
-            <a class="button button-block button-positive">.button-positive</a>
-            <a class="button button-block button-calm">.button-calm</a>
-            <a class="button button-block button-balanced">.button-balanced</a>
-            <a class="button button-block button-assertive">.button-assertive</a>
-            <a class="button button-block button-energized">.button-energized</a>
-            <a class="button button-block button-royal">.button-royal</a>
-            <a class="button button-block button-dark">.button-dark</a>
+
         </ion-list>
     </ion-content>
 </ion-view>

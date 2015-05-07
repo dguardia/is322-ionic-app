@@ -30,13 +30,13 @@
             <div class="list card">
                 <div class="item item-avatar">
                     <img src="img/ionic-header.png">
-                    <h2>Welcome</h2>
+                    <h2>Freelance Invoice</h2>
                     <p>
-                        Welcome to Ionic.io!
+                        Welcome to Freelance Invoice!
                     </p>
                 </div>
                 <ion-item class="item-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg">
+                    <img src="http://sonogeeks.com/wp-content/uploads/2013/07/billing.jpg">
                 </ion-item>
                 <ion-item>Full of wonderful things.  Take a look!</ion-item>
             </div>
@@ -46,7 +46,7 @@
                     Dashboard
                     <i class="icon ion-ios7-arrow-forward"></i>
                 </ion-item>
-                <ion-item class="item-icon-right item-icon-left" href="#/app/dashboard">
+                <ion-item class="item-icon-right item-icon-left" href="#/app/about">
                     <i class="icon ion-funnel"></i>
                     About Freelance Invoice
                     <i class="icon ion-ios7-arrow-forward"></i>
@@ -64,8 +64,18 @@
                         along with links to their respective documentation.  Simply hit one of the tabs to get started!
                     </p>
                 </div>
+                <div class="item item-body">
+                    <div class="row">
+                        <!-- Display current location's weather data-->
+                        <h3>{{city}} </h3>
+                        <h5><weather-icon icon="current.icon" id="current-icon"></weather-icon> {{current.currently.summary}}</h5>
+                        <p>The temperature now is <span class="large">{{current.currently.temperature}} ° </span></p>
+
+                    </div>
+                </div>
             </div>
         </ion-content>
+
     </ion-pane>
 
 </ion-view>

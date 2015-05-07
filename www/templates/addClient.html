@@ -4,69 +4,47 @@
 
             <div class="card">
                 <div class="item item-text-wrap">
-                    <form action="POST">
+                    <form ng-submit="doClient()">
                         <ion-list type="list-inset">
                             <label class="item item-input">
-                                <input type="text" placeholder="First Name">
+                                <span class="input-label">Name</span>
+                                <input type="text" placeholder="John Smith">
                             </label>
                             <label class="item item-input">
-                                <textarea placeholder="Comments"></textarea>
+                                <span class="input-label">Street</span>
+                                <input type="text" placeholder="128 Main Ave">
                             </label>
                             <label class="item item-input">
-                                <span class="input-label">Username</span>
-                                <input type="text">
+                                <span class="input-label">City</span>
+                                <input type="text" placeholder="City">
                             </label>
-                            <label class="item item-input item-stacked-label">
-                                <span class="input-label">First Name</span>
-                                <input type="text" placeholder="John">
+
+                            <label class="item item-input">
+                                <span class="input-label">Zip Code</span>
+                                <input type="number" pattern="[\d]*" placeholder="01254">
                             </label>
-                            <label class="item item-input item-floating-label">
-                                <span class="input-label">First Name</span>
-                                <input type="text" placeholder="First Name">
+
+                            <label class="item item-input">
+                                <span class="input-label">State</span>
+                                <input type="text" placeholder="128 Main Ave">
                             </label>
-                            <li class="item item-toggle">
-                                HTML5
-                                <label class="toggle toggle-assertive">
-                                    <input type="checkbox">
-                                    <div class="track">
-                                        <div class="handle"></div>
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="item item-checkbox">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                </label>
-                                Flux Capacitor
-                            </li>
-                            <label class="item item-radio">
-                                <input type="radio" name="group">
-                                <div class="item-content">
-                                    Go
-                                </div>
-                                <i class="radio-icon ion-checkmark"></i>
+
+                            <label class="item item-input">
+                                <span class="input-label">Phone</span>
+                                <input type="tel" placeholder="2015242541">
                             </label>
-                            <div class="range">
-                                <i class="icon ion-volume-low"></i>
-                                <input type="range" name="volume">
-                                <i class="icon ion-volume-high"></i>
-                            </div>
-                            <label class="item item-input item-select">
-                                <div class="input-label">
-                                    Lightsaber
-                                </div>
-                                <select>
-                                    <option>Blue</option>
-                                    <option selected>Green</option>
-                                    <option>Red</option>
-                                </select>
+
+                            <label class="item item-input">
+                                <span class="input-label">Email</span>
+                                <input type="email" placeholder="johndoe@email.com">
                             </label>
-                            <ion-checkbox ng-model="isChecked">Checkbox Label</ion-checkbox>
-                            <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
-                            <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
-                            <ion-radio ng-model="choice" ng-value="'C'">Choose C</ion-radio>
-                            <ion-toggle ng-model="airplaneMode" toggle-class="toggle-calm">Airplane Mode</ion-toggle>
-                        </ion-list>
+
+                            <label class="item">
+                                <button class="button button-block button-positive" type="submit">Add Client</button>
+                            </label>
+
+
+                            </ion-list>
                     </form>
                 </div>
             </div>
