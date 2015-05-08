@@ -1,5 +1,5 @@
 <ion-view view-title="Invoice">
-    <ion-content>
+    <ion-content ng-controller="imageController">
         <ion-list>
             <ion-item>
                 <h1 class="text-center">Invoice</h1>
@@ -63,7 +63,7 @@
                     <div class="col">Type Payment:</div>
                     <div class="col col-50">Check</div>
                 </div>
-                <a class="item item-icon-left" href="mailto:{{clients.email}}"><i class="icon ion-email"></i>Email Invoice<p>{{client.email}}</p></a>
+                <a class="item item-icon-left" ng-click="sendEmail()"><i class="icon ion-email"></i>Email Invoice</a>
             </ion-item>
         </ion-list>
     </ion-content>
