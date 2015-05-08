@@ -63,7 +63,7 @@
                     <div class="col">Type Payment:</div>
                     <div class="col col-50">Check</div>
                 </div>
-                <a class="item item-icon-left" ng-click="sendEmail()"><i class="icon ion-email"></i>Email Invoice</a>
+                <a class="item item-icon-left" href="mailto:{{clients.email}}"><i class="icon ion-email"></i>Email<p>{{client.email}}</p></a>
             </ion-item>
         </ion-list>
     </ion-content>
